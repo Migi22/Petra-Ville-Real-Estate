@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .inquiry-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select,
+  textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4c7aaf;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2d2d6a;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  #message {
+    text-align: center;
+    color: #2d2d6a;
+    margin-top: 10px;
+  }
