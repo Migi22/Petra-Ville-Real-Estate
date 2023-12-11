@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
     <link rel="stylesheet" href="test.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   </head>
   <body>
     <div class="log-in-page">
@@ -29,13 +31,13 @@
               <div class="login-container">
                 <form action="login.php" method="post">
                 <div class="email-address">
-                  <label for="email">Email Address</label>
-                  <input type="email" name="email" id="email" required>
+                 
+                  <input type="email" placeholder="Email Address" name="email" id="email" required>
                 </div>
 
                 <div class="password">
-                  <label for="password">Password:</label>
-                  <input type="password" name="password" id="password" required>
+             
+                  <input type="password" placeholder="Password" name="password" id="password" required>
                 </div>
 
                 <div class="sign-in-button">
