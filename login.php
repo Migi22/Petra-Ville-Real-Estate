@@ -3,14 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="test.css" />
+    <link rel="stylesheet" href="login.css" />
   </head>
   <body>
     <div class="log-in-page">
       <div class="overlap-wrapper">
         <div class="overlap">
           <header class="header">
-            <div class="text-wrapper">Petra Ville Real Estate</div>
+            
+              <a id="logo" href="/">Petra Ville Real Estate</a>
+          
             <div class="navbar">
               <div class="text-wrapper">Home</div>
               <div class="div">Properties</div>
