@@ -24,12 +24,14 @@
           <div class="body">
             <div class="overlap-group">
               <div class="text-wrapper-5">Sign In</div>
-              <div class="text-wrapper-6">Sign Up</div>
+              <div class="text-wrapper-6">
+                <a href="register.php" id="signUp">Sign Up</a>
+              </div>
               <div class="text-wrapper-7">or</div>
               <p class="slogan">Unlock Your <br />Dream Home <br />with Us!</p>
               
               <div class="login-container">
-                <form action="test.php" method="post">
+                <form action="login.php" method="post">
                 <div class="email-address">
                   <input type="email" placeholder="Email Address" name="email" id="email" required>
                 </div>
@@ -59,7 +61,7 @@
                   if ($_SERVER["REQUEST_METHOD"] == "POST") {
                       // Retrieve login data
                       $email = $_POST['email'];
-                      $password = $_POST['password'];
+                      $enteredPassword = $_POST['password'];
 
                       // SQL query to check if the user exists
                       $sql = "SELECT * FROM users WHERE email = '$email' LIMIT 1";
@@ -68,12 +70,16 @@
                       if ($result->num_rows > 0) {
                           // User found, verify password
                           $row = $result->fetch_assoc();
-                          $hashedPassword = $row['password'];
 
-                          if (password_verify($password, $hashedPassword)) {
+                          /* debugging
+                          echo "Entered Password: $enteredPassword <br>";
+                          echo "Hashed Password from DB: " . $row['password'] . "<br>";*/
+
+                          if (password_verify($enteredPassword, $row['password'])) {
                               echo "Login successful!";
                           } else {
                               echo "Incorrect password.";
+                              
                           }
                       } else {
                           echo "User not found.";
