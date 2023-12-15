@@ -31,7 +31,7 @@
               <p class="slogan">Unlock Your <br />Dream Home <br />with Us!</p>
               
               <div class="login-container">
-                <form action="test.php" method="post">
+                <form action="register.php" method="post">
                 <div class="email-address">
                   <input type="email" placeholder="Email Address" name="email" id="email" required>
                 </div>
@@ -49,10 +49,10 @@
                 <div id="error-message">
                 <!--PHP registratioN-->
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "";
-                $dbname = "petra_ville";
+                $servername = "sql301.infinityfree.com";
+                $username = "if0_35599178";
+                $password = "10CBmwQfMTE27y";
+                $dbname = "if0_35599178_petra_ville";
                 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -84,7 +84,8 @@
                         $stmt->bind_param("ss", $email, $hashedPassword);
                 
                         if ($stmt->execute()) {
-                            header("Location: registered.html"); // Redirect upon successful registration
+                            header('Location: registered.html'); // Redirect upon successful registration
+                            exit;
                         } else {
                             if ($conn->errno == 1062) { // 1062 is the MySQL error code for duplicate entry
                                 $error = 'Email address already exists.';
