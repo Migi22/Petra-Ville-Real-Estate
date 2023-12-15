@@ -49,10 +49,18 @@
                 <div id="error-message">
                 <!--PHP registratioN-->
                 <?php
+
+                /*
                 $servername = "sql301.infinityfree.com";
                 $username = "if0_35599178";
                 $password = "10CBmwQfMTE27y";
                 $dbname = "if0_35599178_petra_ville";
+                */
+                
+                $servername = "localhost";
+                $username = "root";
+                $password = "";
+                $dbname = "petra_ville";
                 
                 // Create connection
                 $conn = new mysqli($servername, $username, $password, $dbname);
