@@ -18,7 +18,34 @@ body {
 *:not(.slick-track):not(.slick-list) {
     transition: 0.4s;
 }
+.nav-inquire-btn{
+    color: rgb(233, 233, 233);
+}
 
+.nav-inquire{
+    color: rgb(255, 255, 255);
+    background-color: #f69314;
+    border: none;
+    box-shadow: none;
+    vertical-align: middle;
+    width: auto;
+    display: inline;
+    padding: 7px 12px 7px 12px;
+    border-radius: 5px;
+  }
+  .nav-inquire:hover{
+    color: rgb(255, 255, 255);
+    letter-spacing: 2px;
+    background-color: #ee7300;
+
+
+  }
+  .nav-inquire:active{
+    letter-spacing: 3px;
+    color: rgb(255, 255, 255);
+    transform: translateY(10px);
+    transition: 100ms;
+  }
 .container {
     max-width: 1140px;
     margin: 0 auto;
