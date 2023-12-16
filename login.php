@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="./css/login.css" />
   </head>
   <body>
     <div class="log-in-page">
@@ -11,7 +11,7 @@
         <div class="overlap">
           <header class="header">
             
-              <a id="logo" href="/">Petra Ville Real Estate</a>
+              <a id="logo" href="index.php">Petra Ville Real Estate</a>
           
             <div class="navbar">
               <div class="text-wrapper">Home</div>
@@ -45,6 +45,14 @@
                 <div id="error-message">
                 <?php
                   session_start();
+                  // Check if the user is already logged in
+                  if (isset($_SESSION['user_email'])) {
+                    // Redirect the user to the index page
+                    header("Location: index.php");
+                    exit();
+                  }
+
+
                   /*
                   $servername = "sql301.infinityfree.com";
                   $username = "if0_35599178";
@@ -85,7 +93,7 @@
 
                           if (password_verify($enteredPassword, $row['password'])) {
                             $_SESSION['user_email'] = $email;
-                            echo "Login successful!";
+                            header("Location: index.php");
                           } else {
                               echo "Incorrect password.";
                               
