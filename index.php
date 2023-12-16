@@ -31,7 +31,6 @@
                         <li><a href="http://www.google.com" target="_blank">Properties</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="login.php">Log in</a></li>
                         <li class="nav-inquire"><a class="nav-inquire-btn" href="process_inquiry.php">Inquire NOW</a></li>
                         <!-- email here-->
                         <?php
@@ -42,7 +41,7 @@
                             <a href="logout_page.php" class="active"> <img class="nav-user" src="./images/user_icon.png"/>' 
                             . $_SESSION['user_email'] . '</a></li>';
                         } else {
-                            echo '<li>
+                            echo '<li id="nav-login">
                             <a href="login.php"><img class="nav-user" src="./images/user_icon.png"/>
                             Log in</a></li>';
                         }
