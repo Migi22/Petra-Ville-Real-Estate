@@ -22,22 +22,24 @@ body {
     color: rgb(233, 233, 233);
     
 }
+
 #nav-menu{
     display: flex;
     align-items: center;
 }
 .nav-user{
-    background-color: #ffc506;
-    margin: 0 10px;
+  background-color: rgb(255, 166, 0);
   color: #fff;
   font-size: 30px;
   display: inline-flex;
-  text-decoration: none;
+ 
   transition: color 0.3s ease-in-out;
-  border: 2px solid #ffc506;
+
   border-radius: 50%;
-  padding: 5px;
+  
 }
+
+
 
 .nav-inquire{
     color: rgb(255, 255, 255);
@@ -781,6 +783,8 @@ footer small a:hover {
     }
 
     nav ul {
+      display: flex;
+      flex-direction: column;
         position: fixed;
         background: #fff;
         right: -100%;
