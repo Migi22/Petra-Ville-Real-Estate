@@ -1,11 +1,13 @@
+
 CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE inquiries (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    inquiry_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
     first_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -17,9 +19,7 @@ CREATE TABLE inquiries (
     tcp_range VARCHAR(50) NOT NULL,
     product_interest VARCHAR(50) NOT NULL,
     message TEXT NOT NULL,
-    submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    submission_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    CONSTRAINT unique_email UNIQUE (email)
 );
-
-
-ALTER TABLE users
-ADD CONSTRAINT unique_email UNIQUE (email);

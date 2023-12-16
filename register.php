@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="./css/register.css" />
   </head>
   <body>
     <div class="log-in-page">
@@ -136,4 +136,3 @@
     </div>
   </body>
 </html>
-

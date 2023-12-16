@@ -44,6 +44,7 @@
 
                 <div id="error-message">
                 <?php
+                  session_start();
                   /*
                   $servername = "sql301.infinityfree.com";
                   $username = "if0_35599178";
@@ -83,15 +84,17 @@
                           echo "Hashed Password from DB: " . $row['password'] . "<br>";*/
 
                           if (password_verify($enteredPassword, $row['password'])) {
-                              echo "Login successful!";
+                            $_SESSION['user_email'] = $email;
+                            echo "Login successful!";
                           } else {
                               echo "Incorrect password.";
                               
                           }
                       } else {
                           echo "User not found.";
+                          $email = "";
                       }
-                  }
+                    }
 
                   // Close the connection
                   $conn->close();
@@ -99,9 +102,6 @@
                 </div>
               
               </div>
-
-              
-
 
               <div class="sign-in-google">
                 <div class="overlap-3">
